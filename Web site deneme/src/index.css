@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-gray-800 bg-white;
+  }
+}
+
+@layer components {
+  .tag {
+    @apply inline-block text-xs font-medium px-2.5 py-0.5 rounded-full;
+  }
+}

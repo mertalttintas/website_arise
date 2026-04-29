@@ -263,6 +263,123 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* ── About: Intro banner ── */}
+      <section style={{ background: 'linear-gradient(105deg, #0b1e38 0%, #0f2a45 60%, #0d2d38 100%)' }}>
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 py-20 text-center">
+          <p className="text-[#b0c8e0] text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+            In a world shaped by compounding disruptions—pandemics, disasters, conflicts, climate pressures, and supply chain shocks—sustainability can no longer be approached as a long-term goal under stable conditions.
+          </p>
+          <p className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Sustainability requires <span style={{ color: '#E07B3A' }}>resilience.</span>
+          </p>
+          <p className="text-[#b0c8e0] text-base leading-relaxed max-w-3xl mx-auto mb-4">
+            Yet resilience alone is not enough. These disruptions affect entire systems, but their consequences are unevenly distributed, with vulnerable populations bearing the greatest burden.
+          </p>
+          <p className="text-white text-base font-medium leading-relaxed max-w-2xl mx-auto">
+            ARISE Lab is an academic research laboratory addressing these challenges through data-driven analytics and decision analytics for complex systems.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Our Approach ── */}
+      <section className="bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-3">Our Approach</h2>
+            <p className="text-gray-500 text-base">We design systems that are:</p>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6 mb-12">
+            {[
+              { color: '#E07B3A', bg: '#fff7f2', label: 'Resilient',   desc: 'Able to anticipate, absorb, and adapt to disruptions' },
+              { color: '#2B5FAD', bg: '#f0f5ff', label: 'Inclusive',   desc: 'Responsive to the needs of vulnerable and underserved groups' },
+              { color: '#3A7A32', bg: '#f2faf0', label: 'Sustainable', desc: 'Capable of maintaining impact over time' },
+            ].map(({ color, bg, label, desc }) => (
+              <div key={label} className="rounded-2xl px-7 py-8 text-center" style={{ background: bg, borderTop: `4px solid ${color}` }}>
+                <p className="text-lg font-bold mb-2" style={{ color }}>{label}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-600 text-base leading-relaxed text-center max-w-3xl mx-auto">
+            Our work combines operations research, optimization, supply chain analytics, and advanced data-driven methods—supported where relevant by AI and emerging technologies—to develop solutions that are both rigorous and actionable.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Transdisciplinary + Research side by side ── */}
+      <section className="bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 py-20 grid md:grid-cols-2 gap-16">
+
+          {/* Transdisciplinary */}
+          <div>
+            <div className="w-10 h-1 rounded-full bg-[#2B5FAD] mb-5" />
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Transdisciplinary by Design</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              ARISE Lab operates at the intersection of disciplines and practice. We integrate insights from multiple fields and co-create solutions that are analytically rigorous while remaining grounded, relevant, and implementable.
+            </p>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">We work closely with</p>
+            <div className="flex flex-wrap gap-2">
+              {['Public institutions', 'NGOs & humanitarian orgs', 'Private sector', 'Communities'].map(p => (
+                <span key={p} className="px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-[#1e3a5f] text-xs font-medium shadow-sm">
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Research & Impact */}
+          <div>
+            <div className="w-10 h-1 rounded-full bg-[#E07B3A] mb-5" />
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Research &amp; Impact</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              We develop analytical models and decision-support tools that help organizations better prepare for, respond to, and recover from shocks—across interconnected domains:
+            </p>
+            <ul className="space-y-3">
+              {[
+                { icon: '🚨', label: 'Humanitarian and disaster systems' },
+                { icon: '🚚', label: 'Supply chain and logistics systems' },
+                { icon: '🌿', label: 'Food and agriculture systems' },
+                { icon: '🏥', label: 'Healthcare systems' },
+                { icon: '🌍', label: 'Climate and sustainability transitions' },
+              ].map(({ icon, label }) => (
+                <li key={label} className="flex items-center gap-3 text-sm text-gray-700">
+                  <span className="text-base w-6 text-center">{icon}</span>
+                  {label}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Working with ARISE ── */}
+      <section style={{ background: 'linear-gradient(105deg, #0b1e38 0%, #0f2a45 60%, #0d2d38 100%)' }}>
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 py-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="w-10 h-1 rounded-full bg-[#E07B3A] mb-5" />
+              <h2 className="text-3xl font-bold text-white mb-4">Working with ARISE</h2>
+              <p className="text-[#b0c8e0] text-sm leading-relaxed">
+                If you are exploring whether a challenge in your organization—particularly related to disruption, resilience, or system performance—could benefit from an analytical and collaborative approach, we welcome engagement.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                'Structure and define complex, disruption-driven challenges',
+                'Develop data-driven analytical frameworks',
+                'Design resilient and inclusive system solutions',
+                'Translate insights into strategies and policy-relevant actions',
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4 bg-white/8 rounded-xl px-5 py-4 border border-white/10">
+                  <span className="text-[#E07B3A] font-bold text-sm mt-0.5 shrink-0">0{i + 1}</span>
+                  <p className="text-white text-sm leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

@@ -2,12 +2,11 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const links = [
-  { to: '/',             label: 'About'       },
-  { to: '/projects',     label: 'Research'    },
-  { to: '/themes',       label: 'Themes'      },
-  { to: '/publications', label: 'Collaborate' },
-  { to: '/people',       label: 'Join Us'     },
-  { to: '/publications', label: 'News'        },
+  { to: '/',             label: 'About'        },
+  { to: '/themes',       label: 'Research'     },
+  { to: '/projects',     label: 'Projects'     },
+  { to: '/people',       label: 'Team'         },
+  { to: '/publications', label: 'Publications' },
 ]
 
 
@@ -17,14 +16,15 @@ export default function Navbar() {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20 py-2">
+        <div className="flex items-center justify-between h-28 py-2">
 
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
             <img
-              src="/logo.jpeg"
-              alt="RiSE Lab"
-              className="h-14 w-auto max-w-[220px] object-contain"
+              src="/Arise Logo (2).png"
+              alt="ARISE Lab"
+              style={{ width: '320px', height: 'auto' }}
+              className="object-contain"
             />
           </Link>
 
